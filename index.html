@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>ANGULAR CLI – The angular Command Line Interface to scaffold and build nodejs style modules </section>
+				<section>
+					<h2>How to do make and run an angular program from the command line</h2>
+					<p>
+						Step 1
+					</p>
+					<p>
+						make sure your system has npm installed.  Then open the command line
+					</p>
+				</section>
+				<section>
+					<h2>Step 2</h2>
+					<section data-markdown>
+					<script type="text/template">
+						
+						Be prepared to use your command line at every stage.  
+
+						```
+						command line:
+						 npm install -g @angular/cli
+						
+						```
+					</script>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Step 3</h2>
+						<section data-markdown>
+							<script type="text/template">
+						
+							Create your project.  
+
+							```
+							command line:
+							ng new angularProject
+						
+							```
+							</script>
+						</section>
+					</section>
+				</section>
+				
+				<section>
+					<h2>Step 4</h2>
+					<section data-markdown>
+						<script type="text/template">
+						
+						Open your angularProject in a browser:  
+
+						```
+						command line:
+						 cd angularProject 
+						 ng serve --open
+						
+						```
+						</script>
+					</section>
+				</section>
+				
+				<section>
+					<h2>Step 5</h2>
+					<section data-markdown>
+						<script type="text/template">
+						
+						Open your angularProject in your favorite editor like Visual Studio:  
+
+						```
+						Change the application title
+						
+
+						You'll find the implementation of the shell AppComponent distributed over three files:
+
+						app.component.ts— the component class code, written in TypeScript.
+						app.component.html— the component template, written in HTML.
+						app.component.css— the component's private CSS styles.
+						
+						```
+						</script>
+					</section>
+				</section>
+				
+				<section>
+					<h2>Step 6</h2>
+					<section data-markdown>
+						<script type="text/template">
+						
+						to create the .ts with it's complementary .html and .css file:  
+
+						```
+						type in command line: 
+						ng generate component yourComponent
+						
+						```
+						</script>
+					</section>
+				</section>
+				
+				<section>
+					<h2>Step 7</h2>
+					<section data-markdown>
+						<script type="text/template">
+						
+						Import FormsModule in the app.module.ts, where the NgModel lives
+
+						```
+						import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+						
+						```
+						</script>
+					</section>
+				</section>
+				
+				<section>
+					<h2>Step 8</h2>
+					<section data-markdown>
+						<script type="text/template">
+						
+						AND Then add FormsModule to the @NgModule metadata's import array:
+
+						```
+						imports: [
+							BrowserModule,
+							FormsModule
+						],						
+						```
+						</script>
+					</section>
+				</section>
+				
+				<section>
+					<h2>Step 9</h2>
+					<section data-markdown>
+						<script type="text/template">
+						
+						Edit and add .css files you may choose from the Angular.io website
+
+						```
+						And edit your html to your liking.
+  
+						```
+						</script>
+					</section>
+				</section>
+				<section>
+					<h2>Credits:  </h2>
+					<p>
+						source of text and material:  https://angular.io/tutorial/toh-pt0
+					</p>
+					<p>
+						ONE major note:  My experience is that you cannot use 
+						Angular CLI in conjunction with using the Angular Template 
+						provided in Visual studio.  It will not work.  Pick one 
+						or the other.
+					</p>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
